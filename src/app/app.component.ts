@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  list = ['Milk', 'Sugar', 'Bread'];
+
+  onAdd(item: string) {
+    this.list.push(item);
+  }
+
+  onDelete(item: string) {
+    this.list.splice(this.list.indexOf(item), 1);
+  }
+
   title = 'animations';
 }
