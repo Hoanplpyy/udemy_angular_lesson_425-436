@@ -22,6 +22,8 @@ import {
         'background-color': 'blue',
         transform: 'translateX(100px)'
       })),
+      transition('normal => highlighted', animate(300)),
+      transition('highlighted => normal', animate(800))
     ])
   ]
 })
