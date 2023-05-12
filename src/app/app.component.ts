@@ -5,7 +5,8 @@ import {
   style,
   animate,
   transition,
-  keyframes
+  keyframes,
+  group
   // ...
 } from '@angular/animations';
 
@@ -100,10 +101,15 @@ import {
         ]))
       ]),
       transition('* => void', [
-        animate(300, style({
-          opacity: 0,
-          transform: 'translateX(100px)'
-        }))
+        group([
+          animate(1000, style({
+            color: 'red',
+          })),
+          animate(3000, style({
+            opacity: 0,
+            transform: 'translateX(100px)'
+          }))
+        ]),
       ]),
     ]),
   ]
