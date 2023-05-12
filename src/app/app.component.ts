@@ -39,7 +39,8 @@ import {
         transform: 'translateX(0) scale(0.5)'
       })),
       transition('normal => highlighted', animate(300)),
-      transition('highlighted => normal', animate(800))
+      transition('highlighted => normal', animate(800)),
+      transition('shrunken <=> *', animate(500)),
     ])
   ]
 })
