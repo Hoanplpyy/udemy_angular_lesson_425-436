@@ -40,9 +40,15 @@ import {
       })),
       transition('normal => highlighted', animate(300)),
       transition('highlighted => normal', animate(800)),
-      transition('shrunken <=> *', animate(500, style({
-        'border-radius': '50px'
-      }))),
+      transition('shrunken <=> *', [
+        style({
+          'background-color': 'orange'
+        }),
+        animate(1000, style({
+          borderRadius: '50px'
+        })),
+        animate(500) // 加入animate但沒有加入style，則會使用上一個style的設定
+      ]),
     ])
   ]
 })
