@@ -138,5 +138,12 @@ export class AppComponent {
     this.list.splice(this.list.indexOf(item), 1);
   }
 
+  animationStarted(event: any) {
+    console.log(event);
+  }
+  animationEnded(event: any) {
+    console.log(event);
+  }
+
   title = 'animations';
 }
